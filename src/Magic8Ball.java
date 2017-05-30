@@ -34,22 +34,21 @@ public class Magic8Ball {
 		
 		do {
 			System.out.println("Please ask me a question: ");
+			do {
 			question = scan.nextLine();
+			} while (question.length() == 0);
+			
 			
 			randomNumber = rand.nextInt(anwsers.length);
 			
 			System.out.println("YOU ASKED: " + question);
 			System.out.println("MAGIC 8-BALL SAYS: " + anwsers[randomNumber]);
-		 
-			System.out.println("would you like to ask another question?(y/n): ");
+			
 			do {
+				System.out.println("would you like to ask another question?(y/n): ");
 				temp = scan.next().toLowerCase().charAt(0);
-				scan.next();
 			} while (!(temp == 'y' || temp == 'n'));
 			
-		 
-		 
-		 
 		} while (temp == 'y');
 		
 		System.out.println("");
